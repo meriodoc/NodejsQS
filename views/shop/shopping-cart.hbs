@@ -1,0 +1,56 @@
+<!--  Display IF There ARE products in shopping cart -->
+
+{{# if products }}
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+      <ul class="list-group">
+        {{# each products}}
+        <li class="list-group-item">
+          <!-- <span class="badge CartqsCount">{{ this.qty }}</span> -->
+            <strong class="strong">{{ this.item.title }}</strong>
+            <span class="label price-item">R&nbsp;{{ this.price }}</span>
+                <span><a class="btn minus-btn" href="/reduce/{{this.item._id}}"></a></span>
+                <button type="button" class="ProdCounter">{{ this.qty }}</button>
+                <span><a class="btn plus-btn" href="/increase/{{this.item._id}}"></a></span>
+                  <!-- <span class="badge CartqsCount">{{ this.qty }}</span> -->
+                  <span><a class="del-btn" href="/remove/{{this.item._id}}"></a></span>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+  <hr style="background:rgba(112,112,112,1); width: 90%; border:0; height:2px" />
+<p></p>
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 total-cart">
+      <strong><span class= "total-name">Total</span></strong>
+      <strong class="total-amount">&emsp;&emsp;R&nbsp; {{ totalPrice }}</strong>
+    </div>
+</div>
+<p></p>
+  <hr/>
+<p></p>
+<p></p>
+  <hr style="background:rgba(112,112,112,1); width: 90%; border:0; height:2px" />
+<p></p>
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+      <!-- This route is for landing page -->
+      <a href="/" type="button" class="btn btn-add-more">Add more</a>
+      <!-- This route is for checkout.hbs Changed IT TO confirmorder.hbs-->
+      <a href="/confirmorder" type="button" class="btn btn-place-order">Place Order</a>
+
+    </div>
+</div>
+
+
+
+
+<!-- Display this if there are NO products in shopping cart -->
+{{ else }}
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+      <h2>No items in cart</h2>
+    </div>
+</div>
+{{/if}}

@@ -1,0 +1,50 @@
+<style>
+#secondmenu, #MenuBar1, #DCont { display: none !important }
+</style>
+
+  <div class="DoubleContainer" id="DCont">
+<!-- Start of first menu -->
+		<div class="menu" id="TempMenu">
+
+<ul id="MenuBar1" class="MenuBarHorizontal">
+  <li><a href="hamper.html"><img src="/images/HeaderMenu/Lock35.png" alt="menuImage" name="Logout" id="Logout" class="Logout"tabindex="1"></a></li>
+</ul>
+<!-- Need to do logout before quickspaza homepage re-direct -->
+<div class="QLogo" id="QLogo">
+<span class="QLogo"><img src="/images/HeaderMenu/QLogoWhite.png" width="35" height="35" alt="QLogo"></a></span>
+</div>
+</div> <!--menu div -->
+</div>
+
+<h1>Thank you</h1>
+<p></p>
+            <br />
+<div class="tuktukImage" id="tuk"><img src="/images/Loginleftfacingtuktuk.png" width="260" height="200" alt="QLogo"></div>
+<!--DoubleContainer div -->
+<p></p>
+            <br />
+
+  <div class="ThankYouPanel" id="thankyoupanel">
+    <p class="ThankMessage" id="thankmessage"><span class="ThankMessage">Your order has been placed and will be delivered on 17 March 2017 </span></p>
+  </div> <!--MyOrdersPanel Div End -->
+<!--+ (date = from selected date on confirm order page) +. -->
+
+<div class="BottomButtons" id="bottomButtons">
+
+
+
+    <!-- ////  THIS BUTTON WILL SHOW THE ORDER DETAIL ///// -->
+  <div class="CloseTX" id="closetx">
+  <a href="/shop/index">
+  <!-- This will re-direct the user to the hamper page AS logged out.  -->
+    	<input name="CloseTXButton" type="submit" value="Close" class="CloseTXButton"/>
+        </a>
+    </div><!-- ViewOrder div -->
+    </div> <!-- Bottom Buttons -->
+
+  <!--Check if user logged in.
+Yes – Check if any of the ordered products are linked to a ‘constrained’ product.
+	Yes – navigate to Special Offer screen
+               No – navigate to Order Confirmation screen
+No – navigate to login screen.
+---------------->

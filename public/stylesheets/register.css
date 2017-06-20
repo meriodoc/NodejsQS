@@ -1,0 +1,143 @@
+﻿body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    background-color:white;
+    font-family: 'RobotoRegular', 'Droid Sans', 'Segoe UI', Segoe, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+    font-size:12px;
+}
+h1 {
+    font-size: 60px;
+    color:#901E79;
+    text-align: center;
+    top: 10%;
+}
+
+.form {
+        font-size: 60px;
+        color:#901E79;
+        text-align: center;
+        top: 70%;
+        left: 50%;
+
+}
+.btnGreen {
+  color: white;
+  font-weight: bold;
+  font-size: 150%;
+  background-color:#BED62F;
+  border:none;
+  width: 85%;
+  height: 35px;
+}
+
+.button:hover {
+  color: #BED62F;
+  cursor: pointer; /* cursor: hand; for IE5 */
+}
+.buttonRegister {
+  ext-decoration: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  color: white;
+  font-weight: bold;
+  font-size: 150%;
+  text-underline-position: unset;
+  background-color: rgba(144,30,121,1);
+  border: none;
+  width: 85%;
+  height: 34px;
+}
+
+.button {
+  color: white;
+  font-weight: bold;
+  font-size: 150%;
+  background-color:#901E79;
+  border:none;
+  width: 85%;
+  height: 35px;
+}
+
+.btnExample {
+  text-decoration: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  color: white;
+  font-weight: bold;
+  font-size: 150%;
+  text-underline-position: unset;
+  background-color:#BED62F;
+  border: none;
+  width: 85%;
+  height: 34px;
+}
+
+.btnExample:hover {
+  color: white;
+  cursor: pointer; /* cursor: hand; for IE5 */
+}
+
+::-webkit-input-placeholder {
+   text-align:center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align:center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align:center;
+}
+
+:-ms-input-placeholder {
+   text-align:center;
+}
+
+.register {
+    background: url(../images/Loginleftfacingtuktuk.png) no-repeat center top;
+    background-color: white;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    top: 21%;
+    height: 15px;
+    width: 250px;
+    text-align: center;
+    padding: 200px 0px 0px 0px;
+    margin: -125px;
+}
+
+.event {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #FFFFFF;
+    margin: 27px;
+    padding: 4px 0px;
+    text-transform: uppercase;
+    background-color: #696969;
+    animation: fade 3000ms infinite;
+    -webkit-animation: fade 3000ms infinite;
+}
+
+.ready {
+    background-color: #4B946A;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@media screen and (orientation: portrait) {
+}
+
+@media screen and (orientation: landscape) {
+}

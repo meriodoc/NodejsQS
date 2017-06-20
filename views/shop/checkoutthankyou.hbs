@@ -1,0 +1,132 @@
+<style>
+#secondmenu, #MenuBar1, #DCont { display: none !important }
+</style>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+    <h1>Thank you</h1>
+
+      <div class="DoubleContainer" id="DCont">
+    <!-- Start of first menu -->
+    		<div class="menu" id="TempMenu">
+
+    <ul id="MenuBar1" class="MenuBarHorizontal">
+      <li><a href="hamper.html"><img src="/images/HeaderMenu/Lock35.png" alt="menuImage" name="Logout" id="Logout" class="Logout"tabindex="1"></a></li>
+    </ul>
+    <!-- Need to do logout before quickspaza homepage re-direct -->
+    <div class="QLogo" id="QLogo">
+    <span class="QLogo"><img src="/images/HeaderMenu/QLogoWhite.png" width="35" height="35" alt="QLogo"></a></span>
+    </div>
+    </div> <!--menu div -->
+    </div>
+
+
+    <p></p>
+                <br />
+    <div class="tuktukImage" id="tuk"><img src="/images/Loginleftfacingtuktuk.png" width="260" height="200" alt="QLogo"></div>
+    <!--DoubleContainer div -->
+    <p></p>
+        <br />
+        <p></p>
+        <hr  class ="style-two" width="85%" size="4" color="purple">
+
+      <div class="ThankYouPanel" id="thankyoupanel">
+        <p class="ThankMessage" id="thankmessage"><span class="ThankMessage">Your order has been placed</span></p>
+        <p class="ThankMessage" id="thankmessage" ><span class="ThankMessage">and will be delivered on <div  id="dateSpan" class="ThankMessage" ></div></span></p>
+      </div> <!--MyOrdersPanel Div End -->
+    <!-- (date = from selected date on confirm order page) +. -->
+    <p></p>
+    <hr   class ="style-two" width="85%" size="4" color="purple">
+    <br/>
+    <div class="BottomButtons" id="bottomButtons">
+
+        <!-- ////  THIS BUTTON WILL SHOW THE ORDER DETAIL ///// -->
+      <div class="CloseTX" id="closetx">
+        <!-- Need to do Route for checkout This one below does not store or clear cart on return to index -->
+      <a href="/">
+      <!-- This will re-direct the user to the hamper page AS logged out.  -->
+        	<input name="CloseTXButton" type="submit" value="Close" class="CloseTXButton"/>
+
+
+            </a>
+              <!-- <input name="CloseTXButto1n" onclick="LoadText()" type="submit" value="TEST" /> -->
+        </div><!-- ViewOrder div -->
+      </div> <!-- Bottom Buttons --><!-- This will target a POST route NOT checkout.hbs -->
+    <!-- <form action="/checkoutthankyou" method="post" id="checkout-form"> -->
+      <!-- <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" required>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" class="form-control" required name="address">
+          </div>
+        </div>
+        <hr>
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="card-name">Card holder name</label>
+            <input type="text" id="card-name" class="form-control" required name="name">
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="card-number">Credit card number</label>
+            <input type="text" id="card-number" class="form-control" required>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="row">
+            <div class="col-xs-6">
+          <div class="form-group">
+            <label for="card-expiry-month">Expiration Month</label>
+            <input type="text" id="card-expiry-month" class="form-control" required>
+          </div>
+        </div>
+        <div class="col-xs-6">
+      <div class="form-group">
+        <label for="card-expiry-year">Expiration Year</label>
+        <input type="text" id="card-expiry-year" class="form-control" required>
+      </div>
+    </div>
+    </div>
+      </div>
+        <div class="col-xs-12">
+            <div class="form-group">
+              <label for="card-cvc">CVC</label>
+              <input type="text" id="card-cvc" class="form-control" required>
+            </div>
+          </div>
+        </div>
+          <button type="submit" class="btn btn-success">Buy now</button> -->
+    <!-- </form> -->
+  </div>
+</div>
+<script type="text/javascript">
+var qs = (function(a) {
+    if (a == "") return {};
+    var b = {};
+    for (var i = 0; i < a.length; ++i)
+    {
+        var p=a[i].split('=', 2);
+        if (p.length == 1)
+            b[p[0]] = "";
+        else
+            b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+    }
+    return b;
+})(window.location.search.substr(1).split('&'));
+ document.getElementById("dateSpan").innerHTML = qs["Date"];
+function LoadText() {
+
+
+ document.getElementById("dateSpan").innerHTML = qs["Date"];
+}
+
+
+</script>
+<!-- <script type="text/javascript" src="/javascripts/checkoutthankyou.js"></script> -->

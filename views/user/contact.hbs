@@ -1,0 +1,63 @@
+<h1 class="GetInTouchHeading">Get in touch</h1>
+
+    <div class="contact">
+
+        <!--<p id="deviceready" class="event">Connecting to Device</p> -->
+        <!--JK must write this function & install nodejs as dependency -->
+        <form name="contactform" method="post" action="#" onsubmit="return contactform();">
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+            <input type="text" required id="sName" name="customerName" placeholder="Name" style="align-content:center; text-align:center; font-size:18px; border:none">
+            <p></p>
+            <hr  class="style-one" width="85%" size="4" color="purple">
+            <p></p>
+            <input type="text" required id="sSurname" name="customerSurname" placeholder="Surname" style="align-content:center; text-align:center; font-size:18px; border:none">
+            <p></p>
+            <hr  class="style-one" width="85%" size="4" color="purple">
+            <p></p>
+            <input type="text" required id="$CellNumber" name="cellPhoneNumber" placeholder="Cell Phone Number" style="align-content:center; text-align:center; font-size:18px; border:none">
+            <p></p>
+            <hr  class="style-one" width="85%" size="4" color="purple">
+            <br />
+            <br />
+            <textarea name="textarea" placeholder="Leave message here" rows="4" cols="24" type="text" style="align-content:center; text-align:center; font-size:18px"></textarea>
+            <br />
+            <p></p>
+            <br />
+            <hr  class="style-one" width="85%" size="4" color="purple">
+            <p></p>
+            
+            <br />
+<!--            <button class="btnExample" href="#openModalSubmit" type="submit" value="Login">Submit</button> --><!--Must write server-side script for mail and modal popup
+             “Thank you for contacting Quickspaza.  A consultant will phone you shortly.”  -->
+
+            <div class="ViewOrder" id="viewOrder">
+  <a href="#openModalSubmit">
+    	<input name="ViewOrderButton" type="button" value="Submit" class="ViewOrderButton"/>
+        </a>
+    </div><!-- ViewOrder div -->
+
+
+
+   </form>
+<!-- ADDED - TO ORDER MODAL START -->
+<div id="openModalSubmit" class="modalDialogSubmit">
+	<div class="BoxSubmit">
+		<a href="/" title="CloseSubmit" class="closeSubmit">X</a>
+	<div class="modal-container">
+    	<br></br>
+        <p id="Paragraph">Your message</p>
+		<p id="Paragraph">has been sent!</p>
+        <br></br>
+        <div class="DisplaySelected" id"displayselected">
+        	<p id="Paragraph">We will contact you</p>
+           <p id="Paragraph">as soon as possible</p>
+        </div>
+
+
+      </div><!-- modal-container END -->
+
+	</div><!-- Box Added END -->
+</div> <!-- modalDialogShare END -->

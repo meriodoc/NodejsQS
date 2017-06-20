@@ -1,0 +1,146 @@
+<!-- <div class="row">
+  <div class="col-sm-6 col-md-4 col-md-offset-4 colo-sm-offset-3">
+    <div id="success" class="alert alert-success" {{#if noMessage}}hidden{{/if}}>
+        {{ successMsg }}
+    </div>
+  </div>
+</div> -->
+
+{{# each products }}
+  <div class="row">
+    {{#each this }}
+      <table cellpadding="0" border="0" align="center" id="prodTable">
+        <tr>
+          <td colspan="2" rowspan="4" id="$ProdImage" class="ProdImageFixIndex">
+            <img src="{{ this.imagePath }}" alt="..." class="image-responsive ProdImageFix">
+          </td>
+          <td width="204" class="ProductName" id="$prodName">
+            <div class="ProdName">&nbsp;{{ this.title }}</div>
+          </td>
+          <td width="26">&nbsp;</td>
+          <td width="26">&nbsp;</td>
+          <td width="26">&nbsp;</td>
+        </tr>
+        <tr>
+          <td><div class="ProdPrice" id="$SellingPrice">&nbsp;R&nbsp;{{ this.price }}</div></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><div class="ClickToSee" id="clickToSee">&nbsp;Click to see hamper</div></td>
+          <!-- <td><span><a class="ClickToSee" id="clickToSee" onMouseOver="MM_swapImage('BlankPic','','/images/Loginleftfacingtuktuk.png',1)"
+          onMouseOut="MM_swapImgRestore()">&nbsp;Click to see hamper</a></span></td> -->
+
+          <!-- <span><a class="btn minus-btn" href="/reduce/{{this.item._id}}"></a></span> -->
+          <!-- <td><span><a class="btn minus-btn-index" href="/reducecart/{{this.id}}"></a></span></td>
+           -->
+          <!-- <td><span><button type="button" class="ProdCounter-index">{{this.qty}}</button></span></td> --> 
+          <!-- <button type="button" class="ProdCounter">{{ this.qty }}</button> -->
+          <td><span><a class="btn plus-btn-index" href="/add-to-cart/{{this.id}}"></a></span></td>
+
+          <!-- <span><a class="btn minus-btn" href="/reduce/{{this.item._id}}"></a></span>
+          <button type="button" class="ProdCounter">{{ this.qty }}</button>
+          <span><a class="btn plus-btn" href="/increase/{{this.item._id}}"></a></span> -->
+
+        </tr>
+      </table>
+    {{/each}}
+      </div>
+  {{/each}}
+
+  <div id="openModalShare" class="modalDialogShare">
+	<div class="BoxShare">
+		<a href="#closeShare" title="CloseShare" class="closeShare">X</a>
+	<div class="modal-container">
+          <p id="Paragraph">Share Quickspaza</p>
+		      <p id="Paragraph">with a friend</p>
+
+      <div class="Whatsapp" id="Whatsapp">
+             <!-- Whatsapp -->
+          <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share"><img src="images/SocialShare/whatsappQS.png" alt="Share Quickspaza on Whatsapp" name="WA" width="50" height="50" class="WA" id="WA" /></a>
+          <div>
+              <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share"><span class="facebookText"></span> <span class="WhatsAppText">WhatsApp</span>></a>
+          </div> <!--  Whatsapp Text END -->
+      </div><!--  Whatsapp END -->
+        <div class="facebook" id="facebook">
+        <!-- Facebook -->
+            <a href="http://www.facebook.com/sharer.php?u=http://facebook.com/quickspaza/?fref=ts" target="_blank">
+              <img src="images/SocialShare/facebookQS.png" alt="Facebook" />
+            </a>
+          <div class="facebookText"><a href="http://www.facebook.com/sharer.php?u=http://facebook.com/quickspaza/?fref=ts" target="_blank" class="facebookText"><span class="facebookText">Facebook</span></a>
+          </div>
+        </div> <!--  facebook Text END -->
+  </div> <!-- modal-container END -->
+
+	</div> <!-- BoxShare END -->
+</div> <!-- modalDialogShare END -->
+
+<!-- LOGOUT MODAL START -->
+
+<div id="openModalLogout" class="modalDialogLogout">
+	<div class="BoxLogout">
+  		<a href="#closeLogout" title="CloseLogout" class="closeLogout">X</a>
+  	<div class="modal-container">
+      	<br></br>
+            <p id="Paragraph">Are you sure</p>
+  		      <p id="Paragraph">you want to</p>
+            <p id="Paragraph">logout?</p>
+          <br></br>
+          <div class="LogoutConfirm" id="logoutconfirm">
+          <!-- Do Logout procedure and drop session  JS Write to Session logs then return to index page -->
+          	<div style="text: white;" class="YesLogout" id="yeslogout"><a href="login.html" style="color: rgba(255,255,255,1)">YES</a>
+            </div>
+          <!-- Do Not do Logout procedure and retain session JS-->
+                  <div class="NoLogout" id="nologout"><a href="hamper.html" style="color: rgba(255,255,255,1)">NO</a>
+                  </div>
+          </div><!-- LogoutConfirm END -->
+
+      </div><!-- modal-container END -->
+
+	</div><!-- Box Logout END -->
+</div> <!-- modalDialogShare END -->
+
+<div id="openModalLogin" class="modalDialogLogin">
+	<div class="BoxLogin">
+		<a href="#closeLogin" title="CloseLogin" class="closeLogin">X</a>
+	<div class="modal-container">
+    	<br></br>
+        <p id="Paragraph2">You must Login</p>
+		<p id="Paragraph2">to order!</p>
+        <p id="Paragraph">Please click on</p>
+        <p id="Paragraph">login below</p>
+        <br></br>
+        <div class="LoginConfirm" id="loginconfirm">
+        <!-- Do Login procedure and open session  JS Write to Session logs then return to hamper page -->
+        	<div style="text: white;" class="YesLogin" id="yeslogin"><a href="index.html" style="color: rgba(255,255,255,1)">LOGIN</a></div>
+        <!-- Do Not do Logout procedure and retain session JS-->
+            <div class="NoLogin" id="nologin"><a href="hamper.html" style="color: rgba(255,255,255,1)">CANCEL</a></div>
+    </div><!-- LogoutConfirm END -->
+
+      </div><!-- modal-container END -->
+
+	</div><!-- Box Login END -->
+</div> <!-- modalDialogShare END -->
+
+
+<!-- LOGIN  MODAL END -->
+
+<!-- ADDED - TO ORDER MODAL START -->
+
+    <div id="openModalAdded" class="modalDialogAdded">
+    	<div class="BoxAdded">
+    		<a href="#closeAdded" title="CloseAdded" class="closeAdded">X</a>
+    	<div class="modal-container">
+        	<br></br>
+            <p id="Paragraph2">Added to</p>
+    		<p id="Paragraph2">your order!</p>
+            <div class="DisplaySelected" id"displayselected">
+            	<p id="Paragraph">Display what was selected Div</p>
+            </div>
+
+
+      </div><!-- modal-container END -->
+
+	   </div><!-- Box Added END -->
+   </div> <!-- modalDialogShare END -->

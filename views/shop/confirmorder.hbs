@@ -1,0 +1,141 @@
+<!-- This is to hide elements of the nav bars by id -->
+<style>
+#secondmenu, #MenuBar1, #DCont { display: none !important }
+</style>
+
+<div class="Page" id="Page">
+	<div class="menu" id="TempMenu">
+    <div class="QLogo" id="QLogo">
+      <span class="QLogo"><img src="images/HeaderMenu/QLogoWhite.png" width="35" height="35" alt="QLogo"></span>
+    </div>
+      <div class="TitleMyOrders" id="myorder">Confirm Order</div>
+  </div>
+	<!-- FIX THIS TO DISPLAY SAME AS ON SHOPPING CART PAGE - START -->
+      <!-- <div class="confirmOrder" id="confirmorder"><img src="images/Confirm Order/Corder.PNG" width="330" height="183" alt="co"> -->
+			{{# if products }}
+			<div class="row">
+			    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+			      <ul class="list-group">
+			        {{# each products}}
+			        <li class="list-group-item">
+			          <!-- <span class="badge CartqsCount">{{ this.qty }}</span> -->
+			            <strong class="strong">{{ this.item.title }}</strong>
+			            <span class="label price-item">R&nbsp;{{ this.price }}</span>
+			                <span><a class="btn minus-btn" href="/reduce/{{this.item._id}}"></a></span>
+			                <button type="button" class="ProdCounter">{{ this.qty }}</button>
+			                <span><a class="btn plus-btn" href="/increase/{{this.item._id}}"></a></span>
+			                  <!-- <span class="badge CartqsCount">{{ this.qty }}</span> -->
+			                  <span><a class="del-btn" href="/remove/{{this.item._id}}"></a></span>
+			        </li>
+			      {{/each}}
+			    </ul>
+			  </div>
+			</div>
+
+			<div class="row">
+			    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 total-cart">
+			      <strong><span class= "total-name">Total</span></strong>
+			      <strong class="total-amount">&emsp;&emsp;R&nbsp; {{ totalPrice }}</strong>
+			    </div>
+			</div>
+			<hr>
+			<p></p>
+			  <hr/>
+			<p></p>
+			<p></p>
+			  <hr style="background:rgba(112,112,112,1); width: 90%; border:0; height:2px" />
+			<p></p>
+			<!-- Delivery Date Start -->
+				<div class="row">
+			    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 total-cart">
+							<div id="sandbox-container">
+			        	<strong><span class= "total-name">Delivery Date</span></strong>
+			      			<input id="datepick" data-provide="datepicker" type="text" class="form-control-date">
+			      		<span><a id="calbut" class="btn cal-btn"></a></span>
+			   		</div>
+			    </div>
+				</div>
+			<!-- Delivery Date Stop -->
+			<p></p>
+			  <hr/>
+			<p></p>
+			<p></p>
+			  <hr style="background:rgba(112,112,112,1); width: 90%; border:0; height:2px" />
+			<p></p>
+			<!-- CustomerNumber - Customer Number START -->
+			<div class="row">
+			    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 total-cart">
+			        <strong><span class= "total-name">Customer</span></strong>
+			        <!-- Need to find out how to do this below -->
+			        <strong><span style="font-size:16px; text-align:center; color:rgba(112,112,112,1); position: absolute; border-color:rgba(144,30,121,1); width:100px; height:28px; right:5%; border:4px">Zuma{{ totalPrice }}</span></strong>
+			   </div>
+	    </div>
+			    <p></p>
+			      <hr/>
+			    <p></p>
+			    <p></p>
+			      <hr style="background:rgba(112,112,112,1); width: 90%; border:0; height:2px" />
+			    <p></p>
+			<!-- CustomerNumber - Customer Number STOP-->
+
+			<!-- CustomerNumber - Customer Adress START -->
+			<div class="row">
+			    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3 total-cart">
+
+			        <strong><span class= "total-name">Address</span></strong>
+							<!-- Need to find out how to do this below -->
+			        <!-- <strong><span style="font-size:16px; text-align:center; color:rgba(112,112,112,1);
+							position: absolute; border-color:rgba(144,30,121,1); width:100px; height:28px;
+							right:5%; border:4px">Adress{{ user.id.adress }}</span></strong>
+						 -->
+				 </div>
+				  <hr/>
+				 <p></p>
+				 <p></p>
+				 <div>
+				 <span class="textareaAddress" for="address" name="adress" id="textarea" contenteditable>Change Address{{ totalPrice }}</span>
+				 <span><a for="address" class="btn EditAddress" id="editAddress" onclick=editAddress()></a></span>
+					</div>
+					<div class="row">
+			      <hr class="rowpadding" style="width: 90%; border:0; height:2px" />
+				 </div>
+
+			<!-- CustomerNumber - Customer Adress STOP-->
+
+			<div class="row">
+			    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+			      <!-- This route is for landing page -->
+			      <a href="/" type="button" class="btn btn-add-more">Add more</a>
+			      <!-- This route is for checkout.hbs Changed IT TO confirmorder.hbs-->
+			      <!-- <a href="#openModalAdded" type="button" class="btn btn-place-order">Place Order</a> -->
+						<a type="button" onclick="placeOrder()" class="btn btn-place-order">Place Order</a>
+						<!-- <a href="/checkoutthankyou" type="button" onclick="placeOrder" class="btn btn-place-order">Place Order</a> -->
+			    </div>
+			</div>
+			<!-- Display this if there are NO products in shopping cart -->
+			{{ else }}
+			<div class="row">
+			    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+			      <h2>No items in cart</h2>
+			    </div>
+			</div>
+			{{/if}}
+<!-- FIX THIS TO DISPLAY SAME AS ON SHOPPING CART PAGE - END-->
+  </div>
+</div>
+<div id="openModalAdded" class="modalDialogAdded">
+	<div class="BoxAdded">
+		<a href="/checkoutthankyou" type="submit" title="CloseAdded" class="closeAdded">X</a>
+	<div class="modal-container">
+    	<br></br>
+        <p id="Paragraph2">Added to</p>
+		<p id="Paragraph2">your order!</p>
+        <div class="DisplaySelected" id"displayselected">
+        	<p id="Paragraph">Display what was selected Div</p>
+        </div>
+
+
+      </div><!-- modal-container END -->
+
+	</div><!-- Box Added END -->
+<script type="text/javascript" src="/javascripts/confirmorder.js"></script>

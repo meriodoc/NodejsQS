@@ -1,0 +1,40 @@
+<div class="register">
+       <p></p>
+<!--<p id="deviceready" class="event">Connecting to Device</p> -->
+<!--JK must write this function headoffice@quickspaza.co.za -->
+       <form name="registerform" method="post" action="mailto:meriodoc@gmail.com" enctype:"text plain">
+           <input type="text" required  id="$Name" name="name" placeholder="Name" style="align-content:center; text-align:center; font-size:18px; border:none">
+           <p></p>
+           <hr  class="style-one" width="85%" size="4" color="purple">
+           <p></p>
+           <input type="text" required id="$Surname" name="surname" placeholder="Surname" style="align-content:center; text-align:center; font-size:18px; border:none">
+           <p></p>
+           <hr  class="style-one" width="85%" size="4" color="purple">
+           <p></p>
+           <input type="text" required id="$CellNumber" name="cellNumber" placeholder="Cell Phone Number" style="align-content:center; text-align:center; font-size:18px; border:none">
+           <p></p>
+           <hr  class="style-one" width="85%" size="4" color="purple">
+           <p></p>
+           <input type="text" id="$House Number" name="houseNumber" placeholder="House Number" style="align-content:center; text-align:center; font-size:18px; border:none">
+           <p></p>
+           <hr  class="style-one" width="85%" size="4" color="purple">
+           <p></p>
+           <input type="text" id="$Street" name="street" placeholder="Street" style="align-content:center; text-align:center; font-size:18px; border:none">
+           <p></p>
+           <hr  class="style-one" width="85%" size="4" color="purple">
+           <p></p>
+           <input type="text" id="$Area" name="area" placeholder="Area" style="align-content:center; text-align:center; font-size:18px; border:none">
+           <p></p>
+           <hr  class="style-one" width="85%" size="4" color="purple">
+           <br />
+<!--JK - Have to create server side script for mailto headoffice@quickspaza.co.za-->
+<!--Must use navigational arrows for rural use-->
+           <a href="/user/thankyou" class="buttonRegister" type="submit" onclick="mailIt()" value="Register">Register</a>
+           <p></p>
+<!-- NB Create contact.html page - Discuss with Andrea-->
+        <!-- <button class="btnExample" type="submit" href="contact.html" type="submit" style="text-decoration:none" value="Contact">Questions? Contact us</button>-->
+       <!--<a href="contact.html" class="btnExample" type="submit" style="text-decoration:none; border:none" value="Contact">Questions? Contact us</a>-->
+       <a href="/user/contact" class="btnExample" type="submit" style="text-decoration:none; border:none" value="Contact">Questions? Contact us</a>
+       </form>
+   </div>
+<script type="text/javascript" src="/javascripts/register.js"></script>

@@ -1,0 +1,124 @@
+<div class="Page" id="Page">
+  <div class="DoubleContainer" id="DCont">
+<!-- Start of first menu -->
+		<div class="menu" id="TempMenu">
+      <ul id="MenuBar1" class="MenuBarHorizontal">
+        <li><a class="MenuBarItemSubmenu" href="#"><img src="/images/HeaderMenu/mobilenavicon.png" alt="menuImage" name="Rotate" id="Rotate" tabindex="1"></a>
+          <ul>
+<!-- HOME HAMBURGER MENU ITEM -->
+<!--      <li><a href="home.html"><img src="images/Header & Menu/Home-35.png" alt="menuImage" width="25" height="25">&nbsp &nbsp &nbsp &nbsp Home</a></li> -->
+<!-- HAMPERS HAMBURGER MENU ITEM -->
+        <li class="menu-item"><a href="/"><img src="/images/Tabs/Hampers50.png" alt="menuImage" width="25" height="25">&nbsp &nbsp &nbsp &nbsp Hampers</a></li>
+<!-- PRODUCTS HAMBURGER MENU ITEM -->
+        <li><a href="/shop/products"><img src="/images/Tabs/Products50.png" alt="menuImage" width="25" height="25">&nbsp &nbsp &nbsp &nbsp Products</a></li>
+
+<!-- SPECIALS HAMBURGER MENU ITEM -->
+<li><a href="/shop/specials"><img src="/images/HeaderMenu/Special50.png" alt="menuImage" name="special" width="25" height="25" id="special">&nbsp &nbsp &nbsp &nbsp Specials</a></li>
+
+<!-- SHARE HAMBURGER MENU ITEM  -->
+<li><a href="#openModalShare"><img src="/images/HeaderMenu/Share35.png" alt="menuImage" name="gps" width="25" height="25" id="gps">&nbsp &nbsp &nbsp &nbsp Share</a></li>
+
+<!-- GPS HAMBURGER MENU ITEM If userid = Driver show else hide -->
+				<li><a href="gps.html"><img src="/images/HeaderMenu/GPS35.png" alt="menuImage" name="gps" width="25" height="25" id="gps">&nbsp &nbsp &nbsp &nbsp GPS</a></li>
+        {{# if login }}
+      <li><a href="#">&nbsp _________________ &nbsp</a></li>
+      <li><a href="/user/logout"><img src="/images/HeaderMenu/Lock50.png" alt="menuImage" width="25" height="25">&nbsp &nbsp &nbsp &nbsp Logout</a></li>
+      {{ else }}
+      <li><a href="#">&nbsp _________________ &nbsp</a></li>
+      <li><a href="/user/register"><img src="/images/HeaderMenu/Lock50.png" alt="menuImage" width="25" height="25">&nbsp &nbsp &nbsp &nbsp Register</a></li>
+      <li><a href="/user/signin"><img src="/images/HeaderMenu/Lock50.png" alt="menuImage" width="25" height="25">&nbsp &nbsp &nbsp &nbsp Login</a></li>
+      {{/if}}
+    </ul>
+  </li>
+</ul>
+
+<div class="QLogo" id="QLogo">
+<span class="QLogo"><a href=""><img src="/images/HeaderMenu/QLogoWhite.png" width="35" height="35" alt="QLogo"></a></span>
+</div>
+
+<!--         <div class="HomeIcon" id="HomeIcon"><a href="home.html"><img src="images/Header & Menu/Home-35.png" width="35" height="35" alt="HomeIcon"></a>
+          </div> -->
+                    <!--HomeIcon div -->
+
+<!--Cart div -->
+          <!-- <a href="/shopping-cart/"><i class="fa fa-shopping-basket" aria-hidden="true"></i>QS Shopping Cart
+            <span class="badge">{{ session.cart.totalQty }}</span>
+          </a> -->
+
+
+          <div class="Cartqs" id="cart"><a href="/shopping-cart/"><img src="/images/HeaderMenu/Cart35.png" width="35" height="35" alt="Cartqs"></a>
+              <div><span class="badge CartqsCount">{{ session.cart.totalQty }}</span></div>
+          </div> <!--Cart div -->
+
+        <!--  <div class="Cartqs" id="cart"><a href="myorder.html"><img src="images/HeaderMenu/Cart-35.png" width="35" height="35" alt="Cartqs"></a>
+              <div><span class="badge">{{ session.cart.totalQty }}</span></div>
+          </div>  --> <!--Cart div -->
+
+		</div> <!--menu div -->
+<!-- End of first menu -->
+
+<!-- Start of second menu -->
+   	<div class="SecondMenu" id="secondmenu">
+	  <div class="Hamper" id="hamper"><a href="/"><img src="/images/Tabs/Hampers50.png" width="35" height="35" alt="Hamper"></a>
+	  </div> <!--Hamper div -->
+	  <div class="Products" id="products"><a href="/shop/products"><img src="/images/Tabs/Products50.png" width="40" height="40" alt="Products"></a>
+	  </div> <!--Products div -->
+                    <!--  Specials Page
+Note the Specials tab must only be visible if there are specials running for current date
+ -->
+      <div class="Special" id="special"><a href="/shop/specials"><img src="/images/Tabs/Special50.png" width="40" height="40" alt="special"></a>
+	  </div>	<!--Special div -->
+    </div> <!--SecondMenu div -->
+<!-- End of second menu -->
+  </div>
+  <!--DoubleContainer div -->
+  <!-- <div class="MessagePanel" id="messagepanel">
+  <div class="GifUni" id="gifUni"><a href="https://www.unilever.com/"><img name="UnileverMessage" src="images/Gif/UnileverFinal.gif" width="353" height="120" alt="uni"></a>
+  </div>
+  </div> -->
+</div>
+
+
+
+
+
+<!-- <nav class="navbar navbar-default">
+  <div class="container-fluid"> -->
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Landing Page</a>
+    </div> -->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/shopping-cart/"><i class="fa fa-shopping-basket" aria-hidden="true"></i>QS Shopping Cart
+              <span class="badge">{{ session.cart.totalQty }}</span>
+            </a>
+          </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>
+User Management <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            {{# if login }}
+              <li><a href="/user/profile">User Account</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/user/logout">Logout</a></li>
+            {{ else }}
+            <li><a href="/user/signup">Sign up</a></li>
+            <li><a href="/user/signin">Sign in</a></li>
+            {{/if}}
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
