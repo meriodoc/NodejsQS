@@ -1,1 +1,1 @@
-I'm learning the basics of Git and Nodejs
+I'm learning the basics of Git, Github and Nodejs
